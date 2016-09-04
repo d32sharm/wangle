@@ -124,7 +124,7 @@ if(BUILD_TESTS)
   add_dependencies(libgmock_main gtest)
 
   # Set gmock properties
-  ExternalProject_Get_Property(gmock source_dir binary_dir)
+  ExternalProject_Get_Property(gtest source_dir binary_dir)
   set_target_properties(libgmock PROPERTIES
       "IMPORTED_LOCATION" "${binary_dir}/googlemock/libgmock.a"
       "IMPORTED_LINK_INTERFACE_LIBRARIES" "${CMAKE_THREAD_LIBS_INIT}"
